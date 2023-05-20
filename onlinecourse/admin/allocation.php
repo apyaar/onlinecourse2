@@ -151,6 +151,7 @@ mysqli_query($con,$sql1);
     // var_dump($row);
 }
 
+
 ?>
 
 
@@ -166,6 +167,7 @@ mysqli_query($con,$sql1);
     <link href="../assets/css/bootstrap.css" rel="stylesheet" />
     <link href="../assets/css/font-awesome.css" rel="stylesheet" />
     <link href="../assets/css/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -217,23 +219,78 @@ while($row=mysqli_fetch_array($sql))
  <button type="submit" name="submit" id="submit" class="btn btn-default">Allocate Optional Core</button>
 </form>
 <br>
-<form method="post" >
-   
-                       <div class="form-group">
+<form method="post">
+  <div class="form-group">
     <label for="stream_name">Select Stream</label>
-    <select class="form-control" name="stream_idx" required="required">
-   <option value="">Select Stream</option>   
-   <?php 
-$sql=mysqli_query($con,"select * from stream");
-while($row=mysqli_fetch_array($sql))
-{
-?>
-<option value="<?php echo htmlentities($row['stream_id']);?>"><?php echo htmlentities($row['stream_name']);?></option>
-<?php } ?>
-    </select> 
-   </div> 
+    <select class="form-control" name="stream_idx" id="stream_idx" required="required">
+      <option value="">Select Stream</option>
+      <?php
+      $sql = mysqli_query($con, "select * from stream");
+      while($row = mysqli_fetch_array($sql)) {
+        ?>
+        <option value="<?php echo htmlentities($row['stream_id']);?>"><?php echo htmlentities($row['stream_name']);?></option>
+        <?php
+      }
+      ?>
+    </select>
+  </div>
 
- <button type="submit" name="submitElective" id="submitElective" class="btn btn-default">Allocate Electives</button>
+  <div class="col-md-12">
+    <!-- Bordered Table -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Constraints
+      </div>
+      <!-- /.panel-heading -->
+      <div class="panel-body">
+        <div class="table-responsive table-bordered">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Course Name</th>
+                <th>Allocated</th>
+                <th>Constraint</th>
+                <th>Updated Constraints</th>
+              </tr>
+            </thead>
+            <tbody id="courseTable">
+              <!-- Table rows will be dynamically populated here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" name="submitElective" id="submitElective" class="btn btn-default">Allocate Electives</button>
+  <!-- <button type="submit" name="submitupdateConstraint" id="submitupdateConstraint" class="btn btn-default">Update Constraint</button> -->
+
+  <script>
+    $(document).ready(function() {
+      var streamDropdown = $('#stream_idx');
+      var courseTable = $('#courseTable');
+
+      streamDropdown.on('change', function() {
+        var selectedStreamId = $(this).val();
+        // console.log(selectedStreamId);
+        // Send AJAX request to fetch updated course data
+        $.ajax({
+          url: 'fetch_courses.php',
+          method: 'POST',
+          data: { stream_idx: selectedStreamId },
+          success: function(response) {
+            // Update the table content with the response
+            courseTable.html(response);
+          },
+          error: function(xhr, status, error) {
+            // Handle errors if necessary
+            console.log(error);
+          }
+        });
+      });
+    });
+  </script>
 </form>
 
                             </div>

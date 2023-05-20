@@ -11,7 +11,6 @@
                              <!-- <li><a href="course.php">Course</a></li> -->
                               <li><a href="student-registration.php">Registration</a></li>
                                <li><a href="manage-students.php">Manage Students</a></li>
-                               <li><a href="constraints.php">Constraints</a></li>
                                <li><a href="eligible-optional-core.php">Choose Eligible Optional Core</a></li>
                                <li><a href="enroll-history.php">Enroll History</a></li>
                                <li><a href="allocation.php">Allocate Courses</a></li>

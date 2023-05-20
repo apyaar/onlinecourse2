@@ -83,10 +83,6 @@ while($row=mysqli_fetch_array($sql))
 
 
 
-<!-- <div class="form-group">
-    <label for="Pincode">Pincode  </label>
-    <input type="text" class="form-control" id="Pincode" name="Pincode" readonly value="<?php echo htmlentities($row['pincode']);?>" required />
-  </div>    -->
 
 <div class="form-group">
     <label for="CGPA">CGPA  </label>
