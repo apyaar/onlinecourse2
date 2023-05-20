@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2023 at 09:40 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: May 20, 2023 at 11:48 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -71,25 +71,25 @@ CREATE TABLE `course` (
 --
 
 INSERT INTO `course` (`course_code`, `courseName`, `courseUnit`, `noofSeats`, `bucket_number`, `MCA`, `seats_for_IMTECH_3-4`, `seats_for_IMTECH_5-6`, `IMTECH_7-8`, `seats_for_MTECH_AI`, `seats_for_MTECH_CS`, `seats_for_MTECH_IT`, `creationDate`, `updationDate`) VALUES
-('ACN – V Radha*', 'ACN', NULL, NULL, 6, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
-('AdvAlgo-RPL', 'Advance Algo', NULL, NULL, 3, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
-('Biometrics – MVNK *', 'Biometrics', NULL, NULL, 5, 0, NULL, 0, 0, 0, 0, 0, '2023-04-11 10:44:17', NULL),
-('CC – RW', 'Cloud Computing', NULL, NULL, 1, 8, NULL, 5, 5, 5, 50, 0, '2023-04-11 10:44:17', NULL),
-('CIP – CB', 'CIP', NULL, NULL, 6, 5, NULL, 5, 15, 10, 15, 5, '2023-04-11 10:44:17', NULL),
-('Data Comp – VCV', 'Data Compression', NULL, NULL, 3, 50, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
-('DDPC-SNS', 'DDPC', NULL, NULL, 4, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
-('DL – AN', 'DL', NULL, NULL, 5, 0, NULL, 0, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
-('EHCF – DP', 'EHFC', NULL, NULL, 4, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
-('IoT – NKS', 'Internet of Things', NULL, NULL, 3, 10, NULL, 0, 15, 5, 15, 5, '2023-04-11 10:44:17', NULL),
-('Meta Heuristics – AS', 'Meta Heuristics', NULL, NULL, 4, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
-('ML – VN', 'Machine Learning', NULL, NULL, 2, 0, NULL, 0, 0, 50, 0, 0, '2023-04-11 10:44:17', NULL),
-('NWSec – WN', 'Network Security', NULL, NULL, 2, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
-('SM – CRR', 'SM', NULL, NULL, 5, 0, NULL, 0, 0, 0, 0, 0, '2023-04-11 10:44:17', NULL),
-('SNA – SDB', 'SNA', NULL, NULL, 6, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
-('SocSys-HM', 'Social System', NULL, NULL, 6, 50, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
-('SP-MNM', 'SP', NULL, NULL, 3, 0, NULL, 0, 0, 0, 0, 0, '2023-04-11 10:44:17', NULL),
-('SysSec-BMM*', 'System Security', NULL, NULL, 1, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:16', NULL),
-('Virtualization- PSK *', 'Virtualization', NULL, NULL, 2, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL);
+('ACN – V Radha*', 'ACN', NULL, 100, 6, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
+('AdvAlgo-RPL', 'Advance Algo', NULL, 100, 3, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
+('Biometrics – MVNK *', 'Biometrics', NULL, 100, 5, 0, NULL, 0, 0, 0, 0, 0, '2023-04-11 10:44:17', NULL),
+('CC – RW', 'Cloud Computing', NULL, 100, 1, 8, NULL, 5, 5, 5, 50, 0, '2023-04-11 10:44:17', NULL),
+('CIP – CB', 'CIP', NULL, 100, 6, 5, NULL, 5, 15, 10, 15, 5, '2023-04-11 10:44:17', NULL),
+('Data Comp – VCV', 'Data Compression', NULL, 100, 3, 50, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
+('DDPC-SNS', 'DDPC', NULL, 100, 4, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
+('DL – AN', 'DL', NULL, 100, 5, 0, NULL, 0, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
+('EHCF – DP', 'EHFC', NULL, 100, 4, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
+('IoT – NKS', 'Internet of Things', NULL, 100, 3, 10, NULL, 0, 15, 5, 15, 5, '2023-04-11 10:44:17', NULL),
+('Meta Heuristics – AS', 'Meta Heuristics', NULL, 100, 4, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
+('ML – VN', 'Machine Learning', NULL, 100, 2, 0, NULL, 0, 0, 50, 0, 0, '2023-04-11 10:44:17', NULL),
+('NWSec – WN', 'Network Security', NULL, 100, 2, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
+('SM – CRR', 'SM', NULL, 100, 5, 0, NULL, 0, 0, 0, 0, 0, '2023-04-11 10:44:17', NULL),
+('SNA – SDB', 'SNA', NULL, 100, 6, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
+('SocSys-HM', 'Social System', NULL, 100, 6, 50, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL),
+('SP-MNM', 'SP', NULL, 100, 3, 0, NULL, 0, 0, 0, 0, 0, '2023-04-11 10:44:17', NULL),
+('SysSec-BMM*', 'System Security', NULL, 100, 1, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:16', NULL),
+('Virtualization- PSK *', 'Virtualization', NULL, 100, 2, 0, NULL, 50, 50, 50, 50, 50, '2023-04-11 10:44:17', NULL);
 
 -- --------------------------------------------------------
 
@@ -138,21 +138,15 @@ CREATE TABLE `courses_allocated` (
 --
 
 INSERT INTO `courses_allocated` (`courses_allocated_id`, `student_reg_no`, `course_code`, `course_name`, `course_type`) VALUES
-(207, '18MCME03', 'Data Comp – VCV', 'Data Compression', 'optional_Core'),
-(208, '18MCME03', 'SysSec-BMM*', 'System Security', 'optional_Core'),
-(209, '18MCME04', 'IoT – NKS', 'Internet of Things', 'optional_Core'),
-(210, '18MCME04', 'SysSec-BMM*', 'System Security', 'optional_Core'),
-(211, '18MCME02', 'DDPC-SNS', 'DDPC', 'optional_Core'),
-(212, '18MCME02', 'Data Comp – VCV', 'Data Compression', 'optional_Core'),
-(213, '18MCME03', 'DDPC-SNS', 'DDPC', 'Elective'),
-(214, '18MCME03', 'NWSec – WN', 'Network Security', 'Elective'),
-(215, '18MCME03', 'SNA – SDB', 'SNA', 'Elective'),
-(216, '18MCME04', 'CIP – CB', 'CIP', 'Elective'),
-(217, '18MCME04', 'Virtualization- PSK *', 'Virtualization', 'Elective'),
-(218, '18MCME04', 'EHCF – DP', 'EHFC', 'Elective'),
-(219, '18MCME02', 'Virtualization- PSK *', 'Virtualization', 'Elective'),
-(220, '18MCME02', 'Meta Heuristics – AS', 'Meta Heuristics', 'Elective'),
-(221, '18MCME02', 'CIP – CB', 'CIP', 'Elective');
+(247, '18MCME03', 'DDPC-SNS', 'DDPC', 'Elective'),
+(248, '18MCME03', 'NWSec – WN', 'Network Security', 'Elective'),
+(249, '18MCME03', 'SNA – SDB', 'SNA', 'Elective'),
+(250, '18MCME04', 'CIP – CB', 'CIP', 'Elective'),
+(251, '18MCME04', 'EHCF – DP', 'EHFC', 'Elective'),
+(252, '18MCME04', 'SP-MNM', 'SP', 'Elective'),
+(253, '18MCME02', 'ML – VN', 'Machine Learning', 'Elective'),
+(254, '18MCME02', 'Meta Heuristics – AS', 'Meta Heuristics', 'Elective'),
+(255, '18MCME02', 'CIP – CB', 'CIP', 'Elective');
 
 -- --------------------------------------------------------
 
@@ -398,28 +392,28 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`studentRegno`, `stream_id`, `studentPhoto`, `password`, `studentName`, `pincode`, `session`, `department`, `semester`, `cgpa`, `courses_allocated_id`, `enrolment_status_optional`, `enrolment_status_elective`, `optional_core_choice_1`, `optional_core_choice_2`, `optional_core_choice_3`, `password_status`, `creationdate`, `updationDate`) VALUES
-('12356', 1, '', '123456', 'ayushi', '181793', NULL, NULL, NULL, '0.00', 0, 0, 0, 'SM', 'Advance Algo', 'Virtualization', 1, '2023-04-02 09:58:10', '02-04-2023 04:22:17 PM'),
-('18MCME02', 7, NULL, '12345', 'Amruta Jandhyala', NULL, NULL, NULL, '8', '9.00', 0, 1, 1, 'DDPC', 'Data Compression', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:49:51 PM'),
-('18MCME03', 7, NULL, '12345', 'Arun Kumar Dharavath', NULL, NULL, NULL, '8', '9.60', 0, 1, 1, 'Data Compression', 'System Security', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:52:36 PM'),
-('18MCME04', 7, NULL, '12345', 'Gayathri G', NULL, NULL, NULL, '8', '9.50', 0, 1, 1, 'Internet of Things', 'System Security', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:54:48 PM'),
-('18MCME07', 7, NULL, '12345', 'Preethi Kajjayam', NULL, NULL, NULL, '8', '4.50', 0, 1, 0, 'EHFC', 'CIP', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:55:28 PM'),
-('18MCME09', 7, NULL, 'GiSuX', 'Challa Subramanyam', NULL, NULL, NULL, '8', '2.50', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('18MCME10', 7, NULL, 'OzEiX', 'K. Parikshit Rao', NULL, NULL, NULL, '8', '9.40', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('18MCME11', 7, NULL, 'LeQwY', 'P Sai Teja', NULL, NULL, NULL, '8', '6.80', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('18MCME13', 7, NULL, 'SlNpS', 'A.Pavan kumar', NULL, NULL, NULL, '8', '5.40', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('18MCME14', 7, NULL, 'JsGtB', 'Harshitha Bingi', NULL, NULL, NULL, '8', '2.10', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('18MCME15', 7, NULL, 'SoJpE', 'Mallu Rakesh Reddy', NULL, NULL, NULL, '8', '7.00', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('18MCME16', 7, NULL, 'KnEqH', 'Rohan', NULL, NULL, NULL, '8', '8.40', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('18MCME17', 7, NULL, 'YzLpQ', 'V. Sai Koushik', NULL, NULL, NULL, '8', '8.80', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('18MCME18', 7, NULL, 'KqSiE', 'K. Roopa Yashaswini', NULL, NULL, NULL, '8', '6.00', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('18MCME19', 7, NULL, 'WiQyY', 'Chinthakindi Tarun', NULL, NULL, NULL, '8', '7.60', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('21MCMI05', 2, NULL, 'TdAqO', 'Ch Saiman Naidu', NULL, NULL, NULL, '4', '5.70', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('21MCMI09', 2, NULL, 'KwAeY', 'Sai Sanjana Madaram', NULL, NULL, NULL, '4', '8.20', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('21MCMI14', 2, NULL, 'XmOsW', 'Rajesh Thalla', NULL, NULL, NULL, '4', '6.50', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('21MCMI16', 2, NULL, 'IhNbO', 'R P Yashasvi', NULL, NULL, NULL, '4', '9.10', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('21MCMI18', 2, NULL, 'LxGlC', 'Dipyaman Mukhopadhyay', NULL, NULL, NULL, '4', '10.00', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('21MCMI20', 2, NULL, 'OgAfQ', 'Drishty gupta', NULL, NULL, NULL, '4', '5.80', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
-('21MCMI25', 2, NULL, 'KvJvC', 'Pralhad Kolambkar', NULL, NULL, NULL, '4', '9.90', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL);
+('12356', 1, '', '123456', 'ayushi', '181793', NULL, NULL, NULL, 0.00, 0, 0, 0, 'SM', 'Advance Algo', 'Virtualization', 1, '2023-04-02 09:58:10', '02-04-2023 04:22:17 PM'),
+('18MCME02', 7, NULL, 'Test@123', 'Amruta Jandhyala', NULL, NULL, NULL, '8', 9.00, 0, 1, 1, 'DDPC', 'Data Compression', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:49:51 PM'),
+('18MCME03', 7, NULL, '12345', 'Arun Kumar Dharavath', NULL, NULL, NULL, '8', 9.60, 0, 1, 1, 'Data Compression', 'System Security', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:52:36 PM'),
+('18MCME04', 7, NULL, '12345', 'Gayathri G', NULL, NULL, NULL, '8', 9.50, 0, 1, 1, 'Internet of Things', 'System Security', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:54:48 PM'),
+('18MCME07', 7, NULL, '12345', 'Preethi Kajjayam', NULL, NULL, NULL, '8', 4.50, 0, 1, 0, 'EHFC', 'CIP', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:55:28 PM'),
+('18MCME09', 7, NULL, 'GiSuX', 'Challa Subramanyam', NULL, NULL, NULL, '8', 2.50, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('18MCME10', 7, NULL, 'OzEiX', 'K. Parikshit Rao', NULL, NULL, NULL, '8', 9.40, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('18MCME11', 7, NULL, 'LeQwY', 'P Sai Teja', NULL, NULL, NULL, '8', 6.80, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('18MCME13', 7, NULL, 'SlNpS', 'A.Pavan kumar', NULL, NULL, NULL, '8', 5.40, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('18MCME14', 7, NULL, 'JsGtB', 'Harshitha Bingi', NULL, NULL, NULL, '8', 2.10, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('18MCME15', 7, NULL, 'SoJpE', 'Mallu Rakesh Reddy', NULL, NULL, NULL, '8', 7.00, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('18MCME16', 7, NULL, 'KnEqH', 'Rohan', NULL, NULL, NULL, '8', 8.40, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('18MCME17', 7, NULL, 'YzLpQ', 'V. Sai Koushik', NULL, NULL, NULL, '8', 8.80, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('18MCME18', 7, NULL, 'KqSiE', 'K. Roopa Yashaswini', NULL, NULL, NULL, '8', 6.00, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('18MCME19', 7, NULL, 'WiQyY', 'Chinthakindi Tarun', NULL, NULL, NULL, '8', 7.60, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('21MCMI05', 2, NULL, 'TdAqO', 'Ch Saiman Naidu', NULL, NULL, NULL, '4', 5.70, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('21MCMI09', 2, NULL, 'KwAeY', 'Sai Sanjana Madaram', NULL, NULL, NULL, '4', 8.20, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('21MCMI14', 2, NULL, 'XmOsW', 'Rajesh Thalla', NULL, NULL, NULL, '4', 6.50, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('21MCMI16', 2, NULL, 'IhNbO', 'R P Yashasvi', NULL, NULL, NULL, '4', 9.10, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('21MCMI18', 2, NULL, 'LxGlC', 'Dipyaman Mukhopadhyay', NULL, NULL, NULL, '4', 10.00, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('21MCMI20', 2, NULL, 'OgAfQ', 'Drishty gupta', NULL, NULL, NULL, '4', 5.80, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
+('21MCMI25', 2, NULL, 'KvJvC', 'Pralhad Kolambkar', NULL, NULL, NULL, '4', 9.90, 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL);
 
 -- --------------------------------------------------------
 
@@ -461,7 +455,43 @@ INSERT INTO `total_no_of_seats` (`stream_id`, `stream_name`, `System Security`, 
 (3, 'MTECH-CS', 50, 50, 0, 50, 50, 50, 15, 0, 50, 50, 50, 50, 50, 0, 0, 15, 50, 50, 50),
 (4, 'MTECH_IT', 50, 0, 0, 50, 50, 50, 5, 0, 50, 50, 50, 50, 50, 0, 0, 5, 50, 50, 50),
 (6, 'IMTECH 5-6', 50, 5, 0, 50, 50, 50, 0, 0, 50, 50, 50, 50, 0, 0, 0, 5, 50, 50, 50),
-(7, 'IMTECH 7-8', 29, 17, 39, 25, 1, -1, 41, 28, 46, 13, 14, 13, 0, 33, -8029, 4, 28, 16, 28);
+(7, 'IMTECH 7-8', 29, 17, 38, 23, -1, -1, 41, 27, 46, 11, 12, 11, 0, 33, -8029, 0, 28, 14, 28);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `total_seats_for_course`
+--
+
+CREATE TABLE `total_seats_for_course` (
+  `courseName` varchar(255) NOT NULL,
+  `number_of_seats` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `total_seats_for_course`
+--
+
+INSERT INTO `total_seats_for_course` (`courseName`, `number_of_seats`) VALUES
+('ACN', 50),
+('Advance Algo', 50),
+('Biometrics', 50),
+('CIP', 50),
+('Cloud Computing', 50),
+('Date Compression', 50),
+('DDPC', 50),
+('DL', 50),
+('EHFC', 50),
+('Internet of Things', 50),
+('Machine Learning', 50),
+('Meta Heuristics', 50),
+('Network Security', 50),
+('SM', 50),
+('SNA', 50),
+('Social System', 50),
+('SP', 50),
+('System Security', 50),
+('Virtualization', 50);
 
 -- --------------------------------------------------------
 
@@ -544,7 +574,9 @@ INSERT INTO `userlog` (`id`, `studentRegno`, `userip`, `loginTime`, `logout`, `s
 (59, '18MCME02', 0x3a3a3100000000000000000000000000, '2023-05-06 16:52:03', '06-05-2023 10:39:53 PM', 1),
 (60, '18MCME03', 0x3a3a3100000000000000000000000000, '2023-05-06 17:09:59', '06-05-2023 10:40:52 PM', 1),
 (61, '18MCME04', 0x3a3a3100000000000000000000000000, '2023-05-06 17:11:03', NULL, 1),
-(62, '12356', 0x3a3a3100000000000000000000000000, '2023-05-11 06:18:15', NULL, 1);
+(62, '12356', 0x3a3a3100000000000000000000000000, '2023-05-11 06:18:15', NULL, 1),
+(63, '12356', 0x3a3a3100000000000000000000000000, '2023-05-17 13:24:12', NULL, 1),
+(64, '12356', 0x3a3a3100000000000000000000000000, '2023-05-17 17:56:38', NULL, 1);
 
 --
 -- Indexes for dumped tables
@@ -640,6 +672,12 @@ ALTER TABLE `total_no_of_seats`
   ADD KEY `stream_id` (`stream_id`);
 
 --
+-- Indexes for table `total_seats_for_course`
+--
+ALTER TABLE `total_seats_for_course`
+  ADD PRIMARY KEY (`courseName`);
+
+--
 -- Indexes for table `userlog`
 --
 ALTER TABLE `userlog`
@@ -665,7 +703,7 @@ ALTER TABLE `courseenrolls`
 -- AUTO_INCREMENT for table `courses_allocated`
 --
 ALTER TABLE `courses_allocated`
-  MODIFY `courses_allocated_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=222;
+  MODIFY `courses_allocated_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=256;
 
 --
 -- AUTO_INCREMENT for table `department`
@@ -719,7 +757,7 @@ ALTER TABLE `stream`
 -- AUTO_INCREMENT for table `userlog`
 --
 ALTER TABLE `userlog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- Constraints for dumped tables
