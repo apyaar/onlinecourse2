@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2023 at 10:30 PM
+-- Generation Time: May 21, 2023 at 11:00 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -131,21 +131,6 @@ CREATE TABLE `courses_allocated` (
   `course_name` varchar(50) NOT NULL,
   `course_type` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `courses_allocated`
---
-
-INSERT INTO `courses_allocated` (`courses_allocated_id`, `student_reg_no`, `course_code`, `course_name`, `course_type`) VALUES
-(247, '18MCME03', 'DDPC-SNS', 'DDPC', 'Elective'),
-(248, '18MCME03', 'NWSec – WN', 'Network Security', 'Elective'),
-(249, '18MCME03', 'SNA – SDB', 'SNA', 'Elective'),
-(250, '18MCME04', 'CIP – CB', 'CIP', 'Elective'),
-(251, '18MCME04', 'EHCF – DP', 'EHFC', 'Elective'),
-(252, '18MCME04', 'SP-MNM', 'SP', 'Elective'),
-(253, '18MCME02', 'ML – VN', 'Machine Learning', 'Elective'),
-(254, '18MCME02', 'Meta Heuristics – AS', 'Meta Heuristics', 'Elective'),
-(255, '18MCME02', 'CIP – CB', 'CIP', 'Elective');
 
 -- --------------------------------------------------------
 
@@ -392,9 +377,9 @@ CREATE TABLE `students` (
 
 INSERT INTO `students` (`studentRegno`, `stream_id`, `studentPhoto`, `password`, `studentName`, `pincode`, `session`, `department`, `semester`, `cgpa`, `courses_allocated_id`, `enrolment_status_optional`, `enrolment_status_elective`, `optional_core_choice_1`, `optional_core_choice_2`, `optional_core_choice_3`, `password_status`, `creationdate`, `updationDate`) VALUES
 ('12356', 1, '', '123456', 'ayushi', '181793', NULL, NULL, NULL, '0.00', 0, 0, 0, 'SM', 'Advance Algo', 'Virtualization', 1, '2023-04-02 09:58:10', '02-04-2023 04:22:17 PM'),
-('18MCME02', 7, NULL, 'Test@123', 'Amruta Jandhyala', NULL, NULL, NULL, '8', '9.00', 0, 1, 1, 'DDPC', 'Data Compression', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:49:51 PM'),
-('18MCME03', 7, NULL, '12345', 'Arun Kumar Dharavath', NULL, NULL, NULL, '8', '9.60', 0, 1, 1, 'Data Compression', 'System Security', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:52:36 PM'),
-('18MCME04', 7, NULL, '12345', 'Gayathri G', NULL, NULL, NULL, '8', '9.50', 0, 1, 1, 'Internet of Things', 'System Security', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:54:48 PM'),
+('18MCME02', 7, NULL, 'Test@123', 'Amruta Jandhyala', NULL, NULL, NULL, '8', '9.00', 0, 1, 0, 'DDPC', 'Data Compression', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:49:51 PM'),
+('18MCME03', 7, NULL, '12345', 'Arun Kumar Dharavath', NULL, NULL, NULL, '8', '9.60', 0, 1, 0, 'Data Compression', 'System Security', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:52:36 PM'),
+('18MCME04', 7, NULL, '12345', 'Gayathri G', NULL, NULL, NULL, '8', '9.50', 0, 1, 0, 'Internet of Things', 'System Security', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:54:48 PM'),
 ('18MCME07', 7, NULL, '12345', 'Preethi Kajjayam', NULL, NULL, NULL, '8', '4.50', 0, 1, 0, 'EHFC', 'CIP', 'NULL', 1, '2023-05-06 07:15:44', '06-05-2023 12:55:28 PM'),
 ('18MCME09', 7, NULL, 'GiSuX', 'Challa Subramanyam', NULL, NULL, NULL, '8', '2.50', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
 ('18MCME10', 7, NULL, 'OzEiX', 'K. Parikshit Rao', NULL, NULL, NULL, '8', '9.40', 0, 0, 0, NULL, NULL, NULL, 0, '2023-05-06 07:15:44', NULL),
@@ -454,7 +439,7 @@ INSERT INTO `total_no_of_seats` (`stream_id`, `stream_name`, `System Security`, 
 (3, 'MTECH-CS', 50, 50, 0, 50, 50, 50, 15, 0, 50, 50, 50, 50, 50, 0, 0, 15, 50, 50, 50),
 (4, 'MTECH_IT', 50, 0, 0, 50, 50, 50, 5, 0, 50, 50, 50, 50, 50, 0, 0, 5, 50, 50, 50),
 (6, 'IMTECH 5-6', 50, 5, 0, 50, 50, 50, 0, 0, 50, 50, 50, 50, 0, 0, 0, 5, 50, 50, 50),
-(7, 'IMTECH 7-8', 29, 17, 38, 23, -1, -1, 41, 27, 46, 11, 12, 11, 0, 33, -8029, 0, 28, 14, 28);
+(7, 'IMTECH 7-8', 21, 17, 36, 9, -1, -1, 41, 27, 46, 9, 10, 9, 0, 33, 47, 47, 28, 14, 28);
 
 -- --------------------------------------------------------
 
@@ -702,7 +687,7 @@ ALTER TABLE `courseenrolls`
 -- AUTO_INCREMENT for table `courses_allocated`
 --
 ALTER TABLE `courses_allocated`
-  MODIFY `courses_allocated_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=256;
+  MODIFY `courses_allocated_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=274;
 
 --
 -- AUTO_INCREMENT for table `department`
