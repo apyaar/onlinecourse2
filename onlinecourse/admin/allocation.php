@@ -150,7 +150,17 @@ mysqli_query($con,$sql1);
     echo '<script>alert("Electives allocated.")</script>';
     // var_dump($row);
 }
+if(isset($_POST['submitupdateConstraint'])) {
+  $streamid = $_POST['stream_idx'];
+  $course = $_POST['course_idx'];
+  $newval = $_POST['newconstraint'];
+  $escapedCourse = mysqli_real_escape_string($con, $course);
+  $sql = mysqli_query($con, "UPDATE total_no_of_seats SET `$escapedCourse`='$newval' WHERE stream_id='$streamid'");
 
+  $sql1=mysqli_query($con, "UPDATE students SET enrolment_status_elective = 0 WHERE stream_id = '$streamid'");
+  $sql2=mysqli_query($con, "DELETE FROM courses_allocated  WHERE student_reg_no IN (    SELECT studentRegno    FROM students    WHERE stream_id = '$streamid'  )");
+  echo '<script>alert("Constraints are updated and students are deallocated")</script>';
+}
 
 ?>
 
@@ -251,7 +261,7 @@ while($row=mysqli_fetch_array($sql))
                 <th>Course Name</th>
                 <th>Allocated</th>
                 <th>Constraint</th>
-                <th>Updated Constraints</th>
+                <!-- <th>Updated Constraints</th> -->
               </tr>
             </thead>
             <tbody id="courseTable">
@@ -262,9 +272,6 @@ while($row=mysqli_fetch_array($sql))
       </div>
     </div>
   </div>
-
-  <button type="submit" name="submitElective" id="submitElective" class="btn btn-default">Allocate Electives</button>
-  <!-- <button type="submit" name="submitupdateConstraint" id="submitupdateConstraint" class="btn btn-default">Update Constraint</button> -->
 
   <script>
     $(document).ready(function() {
@@ -291,6 +298,77 @@ while($row=mysqli_fetch_array($sql))
       });
     });
   </script>
+
+
+
+
+<form method="post" >
+   
+                       <div class="form-group">
+                       <div class="col-md-12">
+    <!-- Bordered Table -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Update Constraints
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="course_name">Select Course</label>
+                <select class="form-control" name="course_idx" id="course_idx" >
+                    <option value="">Select Course</option>
+                    <?php
+                    $sql = mysqli_query($con, "SELECT * FROM course");
+                    while ($row = mysqli_fetch_array($sql)) {
+                        ?>
+                        <option value="<?php echo htmlentities($row['courseName']); ?>"><?php echo htmlentities($row['courseName']); ?></option>
+                        <?php
+                    }
+                    ?>
+                </select>
+                <br>
+                <label for="course_name">Max Value Chosen can be :</label>
+                <label id="updatedConstraintLabel"></label>
+                <br>  
+                <label id="updateIt">Enter Updated Constraint Value </label>
+                <input type="number" name="newconstraint" id="newconstraint" min="0" max="100">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+  $(document).ready(function() {
+  $('#course_idx').change(function() {
+    var selectedCourse = $(this).val();
+    var selectedStreamId = $('#stream_idx').val();
+
+    $.ajax({
+      url: 'fetch_seat_count.php',
+      type: 'POST',
+      data: { course: selectedCourse, stream_idx: selectedStreamId },
+      success: function(response) {
+        var updatedConstraint = parseInt(response.trim()); // Parse the response value as an integer
+        $('#updatedConstraintLabel').text(updatedConstraint); // Set the label text to the response value
+        $('#newconstraint').attr('max', updatedConstraint); // Set the maximum value of the input field
+        console.log(response);
+      },
+      error: function() {
+        $('#updatedConstraintLabel').text('0'); // Set a default value if there is an error
+        $('#newconstraint').attr('max', '0'); // Set the maximum value of the input field to 0
+      }
+    });
+  });
+});
+
+</script> 
+
+   </div> 
+   <button type="submit" name="submitElective" id="submitElective" class="btn btn-default">Allocate Electives</button>
+   <button type="submit" name="submitupdateConstraint" id="submitupdateConstraint" class="btn btn-default">Update Constraint</button>
+</form>
+
+<br>
+
 </form>
 
                             </div>

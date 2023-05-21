@@ -47,12 +47,7 @@ $seatCountUpdatedConstraint=$rowUpdatedConstraints['Totalnoofseats']-$seatCount;
       <td><?php 
      echo htmlentities($seatCount);?></td>
       <td><?php echo htmlentities($row1[$temprow]);?></td>
-      <form method="post" action="submit.php">
-    <td><input type="number" class="form-control" id="updatedConstraint1" name="updatedConstraint1" value="<?php echo htmlentities($seatCountUpdatedConstraint);?>" min="0" max="<?php echo htmlentities($seatCountUpdatedConstraint);?>" required /></td>
-    <td><button type="submit" >Submit</button></td>
-</form>
-
-      <!-- <td> <input type="number" class="form-control" id="updatedConstraint" name="updatedConstraint" value="<?php echo htmlentities($seatCountUpdatedConstraint);?>" min="0" max="<?php echo htmlentities($seatCountUpdatedConstraint);?>" required /></td> -->
+    <!-- <td><input type="text" class="form-control" id="updatedConstraint" name="updatedConstraint" value="<?php echo htmlentities($seatCountUpdatedConstraint);?>" min="0" max="<?php echo htmlentities($seatCountUpdatedConstraint);?>" required readonly/></td> -->
     </tr>
     <?php
     $cnt++;
